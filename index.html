@@ -1,472 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Professional Skills Academy - Excel Course</title>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Skills Academy - Excel Mastery</title>
 
-<!-- SEO Meta -->
-<meta name="description" content="Master Microsoft Excel at just ₹1. Includes PDF notes, HD videos, beginner to advanced training with lifetime access. Limited time offer.">
+<!-- SEO -->
+<meta name="description" content="Master Microsoft Excel at just ₹1. Beginner to Advanced with lifetime access. Limited offer.">
 
-<!-- Open Graph (WhatsApp / LinkedIn Preview) -->
-<meta property="og:title" content="Excel Complete Combo Course – ₹1 Offer">
-<meta property="og:description" content="Limited time offer. Get Excel PDF + Video Course at ₹1 only.">
-<meta property="og:image" content="https://img.icons8.com/color/512/microsoft-excel-2019.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://pavanwanjari.github.io/Course_V4_shubham/index.html">
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-<!-- Razorpay -->
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-
-</head>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Poppins',sans-serif;background:#f4f7fc;color:#333;text-align:center;}
-
-header{
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-color:white;padding:70px 15px;
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#eef2f3,#dfe9f3);
+color:#333;
+overflow-x:hidden;
 }
-header h1{font-size:34px;margin-bottom:10px;}
 
-.offer{
-background:red;padding:8px 20px;border-radius:30px;
-display:inline-block;margin-top:10px;font-weight:600;
+/* HERO SECTION */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:45px;
+font-weight:800;
+margin-bottom:15px;
+animation:slideDown 1.2s ease;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:25px;
+opacity:0.9;
+animation:fadeIn 2s ease;
+}
+
+.offer-badge{
+background:red;
+padding:10px 25px;
+border-radius:30px;
+font-weight:700;
 animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
 0%{transform:scale(1);}
-50%{transform:scale(1.05);}
+50%{transform:scale(1.07);}
 100%{transform:scale(1);}
 }
 
-.section{padding:60px 15px;}
-
-.card{
-background:white;max-width:500px;margin:auto;padding:35px;
-border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.12);
+@keyframes slideDown{
+from{transform:translateY(-40px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
 }
 
-/* Animated Logo */
-.logo-container{
-display:inline-block;
-animation:float 3s ease-in-out infinite;
-}
-.logo-container img{
-width:120px;
-transition:0.4s;
-filter:drop-shadow(0px 8px 15px rgba(0,0,0,0.25));
-}
-.logo-container img:hover{
-transform:rotate(10deg) scale(1.1);
-}
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-100%{transform:translateY(0);}
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
 }
 
-.price del{color:#999;}
-.price strong{color:#28a745;font-size:30px;}
-
-/* WHY SECTION */
-.why-section{
-background:#eef3ff;
-padding:60px 20px;
-}
-.why-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-margin-top:35px;
-}
-.why-box{
-background:white;
-width:260px;
-padding:25px;
-border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
+/* BUTTON */
+.btn{
+margin-top:25px;
+padding:15px 35px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:40px;
+font-size:18px;
+cursor:pointer;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
 transition:0.4s;
 }
-.why-box:hover{
-transform:translateY(-10px);
-}
-
-/* Advertisement Banner */
-.ad-banner{
-background:#fffae6;
-padding:30px;
-font-size:22px;
-font-weight:700;
-color:#d35400;
-}
-
-/* Testimonials */
-.testimonials{
-background:#f0f4ff;
-padding:60px 20px;
-}
-.testimonial-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-margin-top:30px;
-}
-.testimonial{
-background:white;
-width:260px;
-padding:20px;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-font-size:14px;
-}
-
-input{
-width:90%;max-width:350px;padding:12px;margin:8px;
-border-radius:8px;border:1px solid #ccc;
-}
-
-button{
-background:#28a745;color:white;padding:14px 30px;
-border:none;border-radius:30px;font-size:17px;
-cursor:pointer;margin-top:15px;
-transition:0.3s;
-}
-button:hover{
-transform:scale(1.07);
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
 background:#218838;
 }
-button:disabled{
-opacity:0.7;
-cursor:not-allowed;
+
+/* SECTION */
+.section{
+padding:80px 20px;
+text-align:center;
 }
 
-.form-note{font-size:13px;color:#666;margin-top:10px;}
-.form-message{font-size:14px;color:#d35400;margin-top:8px;min-height:20px;}
+.section h2{
+font-size:34px;
+margin-bottom:40px;
+position:relative;
+}
 
-.trust-grid{
-max-width:900px;
-margin:30px auto 0;
+/* CARD GRID */
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:16px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
 }
-.trust-item{
+
+.card{
 background:white;
-border-radius:14px;
-padding:18px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-font-size:14px;
-line-height:1.5;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+transition:0.4s;
 }
 
-.faq{
-background:#ffffff;
-padding:60px 20px;
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 50px rgba(0,0,0,0.2);
 }
-.faq-wrap{max-width:900px;margin:25px auto 0;text-align:left;}
-.faq-item{
-margin-bottom:14px;
-background:#f8faff;
-border:1px solid #e5ebff;
-border-radius:10px;
-padding:14px;
-}
-.faq-item h4{font-size:15px;margin-bottom:7px;color:#1d3557;}
-.faq-item p{font-size:14px;line-height:1.5;}
 
-.already-btn{
-display:inline-block;
-margin-top:20px;
-padding:10px 25px;
+/* ADVERTISEMENT SECTION */
+.ad-section{
+background:linear-gradient(135deg,#ffecd2,#fcb69f);
+padding:70px 20px;
+text-align:center;
+}
+
+.ad-section h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.ad-section p{
+font-size:18px;
+margin-bottom:25px;
+}
+
+/* IMAGE */
+.course-img{
+width:150px;
+margin:20px auto;
+filter:drop-shadow(0px 10px 20px rgba(0,0,0,0.3));
+transition:0.4s;
+}
+.course-img:hover{
+transform:rotate(8deg) scale(1.1);
+}
+
+/* SCROLL ANIMATION */
+.reveal{
+opacity:0;
+transform:translateY(50px);
+transition:all 1s ease;
+}
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
 background:#1d3557;
 color:white;
-border-radius:25px;
-text-decoration:none;
+padding:25px;
+text-align:center;
+font-size:14px;
 }
-
-footer{
-background:#1d3557;color:white;
-padding:20px;font-size:13px;margin-top:50px;
-}
-
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-border-radius:50%;
-width:65px;height:65px;
-display:flex;align-items:center;justify-content:center;
-box-shadow:0 6px 15px rgba(0,0,0,0.3);
-}
-.whatsapp-float img{width:38px;}
 </style>
-<script src="analytics.js"></script>
 </head>
 
 <body>
 
-<header>
-<h1>Master Microsoft Excel</h1>
-<p>Professional Skills Academy</p>
-<div class="offer">🔥 ₹999 Course at ₹1 Only</div>
-</header>
+<!-- HERO -->
+<section class="hero">
+<h1>Master Microsoft Excel Like a Pro</h1>
+<p>Beginner to Advanced | Lifetime Access | PDF + HD Videos</p>
+<div class="offer-badge">🔥 ₹999 Course at ₹1 Only</div>
+<button class="btn" onclick="scrollToEnroll()">Enroll Now</button>
+</section>
 
-<div class="section">
+<!-- WHY SECTION -->
+<section class="section reveal">
+<h2>Why Learn Excel?</h2>
+<div class="grid">
 <div class="card">
-
-<div class="logo-container">
-<img src="https://img.icons8.com/color/96/microsoft-excel-2019.png" alt="Excel course logo">
+<h3>📊 Used Everywhere</h3>
+<p>Finance, HR, Marketing, Data Analytics — Excel is required in every industry.</p>
 </div>
-
-<h2>Excel Complete Combo Course</h2>
-
-<div class="price">
-<del>₹999</del><br>
-<strong>₹1 Only</strong>
+<div class="card">
+<h3>💼 Career Growth</h3>
+<p>Excel helps you get promotions and better salary opportunities.</p>
 </div>
-
-<p>
-✔ PDF Notes<br>
-✔ HD Video Course<br>
-✔ Beginner to Advanced<br>
-✔ Lifetime Access<br>
-</p>
-
+<div class="card">
+<h3>📈 High Demand Skill</h3>
+<p>Every company looks for Excel skilled professionals.</p>
 </div>
 </div>
+</section>
 
-<!-- Advertisement Banner -->
-<div class="ad-banner">
-🚀 Limited Time Offer – Upgrade Your Career Today with Excel Mastery!
-</div>
+<!-- ADVERTISEMENT -->
+<section class="ad-section reveal">
+<h2>🚀 Limited Time Offer</h2>
+<img src="https://img.icons8.com/color/200/microsoft-excel-2019.png" class="course-img">
+<p>Upgrade your career with the most in-demand skill in the corporate world.  
+Today only at ₹1. Don’t miss this opportunity.</p>
+<button class="btn" onclick="scrollToEnroll()">Grab This Deal</button>
+</section>
 
-<!-- WHY EXCEL SECTION -->
-<div class="why-section">
-<h2>🚀 Why Microsoft Excel is Important?</h2>
-
-<div class="why-container">
-
-<div class="why-box">
-<h3>📊 Used in Every Industry</h3>
-<p>Finance, HR, Marketing, Data Analysis — Excel is required everywhere.</p>
-</div>
-
-<div class="why-box">
-<h3>💼 High Salary Skill</h3>
-<p>Excel professionals earn more compared to non-Excel candidates.</p>
-</div>
-
-<div class="why-box">
-<h3>📈 Promotion & Career Growth</h3>
-<p>Excel is mandatory for corporate promotions and job switching.</p>
-</div>
-
-<div class="why-box">
-<h3>🌍 Global Demand</h3>
-<p>Used in MNCs, Government jobs, startups & businesses worldwide.</p>
-</div>
-
-</div>
-</div>
-
-<!-- TESTIMONIALS -->
-<div class="testimonials">
-<h2>⭐ What Our Students Say</h2>
-
-<div class="testimonial-container">
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐ <br><br>
-"This course helped me get promotion in 3 months!"
-<br><br><b>- Rahul Sharma</b>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐ <br><br>
-"Very simple explanation. Best Excel course."
-<br><br><b>- Priya Verma</b>
-</div>
-
-<div class="testimonial">
-⭐⭐⭐⭐⭐ <br><br>
-"I can now create dashboards confidently."
-<br><br><b>- Amit Singh</b>
-</div>
-
-</div>
-</div>
-
-<!-- Trust section -->
-<div class="section" style="padding-top:20px;">
-<h2>✅ Why You Can Buy Safely</h2>
-<div class="trust-grid">
-<div class="trust-item"><b>Instant Access:</b> Once payment is successful, use your purchase email to access materials immediately.</div>
-<div class="trust-item"><b>Support:</b> If you face any issue, message us on WhatsApp and our team will help quickly.</div>
-<div class="trust-item"><b>Policy:</b> Please verify your email correctly at checkout. Access is provided to the same email.</div>
-<div class="trust-item"><b>Secure Checkout:</b> Payment is processed through Razorpay encrypted checkout.</div>
-</div>
-</div>
-
-<!-- Enroll Section -->
-<div class="section">
+<!-- ENROLL -->
+<section class="section reveal" id="enroll">
 <h2>Enroll Now</h2>
-
-<input type="text" id="name" placeholder="Enter Name" autocomplete="name"><br>
-<input type="email" id="email" placeholder="Enter Email" autocomplete="email"><br>
-<input type="text" id="mobile" placeholder="Enter Mobile Number" inputmode="numeric" maxlength="10"><br>
-<input type="text" id="designation" placeholder="Enter Profession"><br>
-
-<h3>Total: ₹1</h3>
-<button id="buyBtn" onclick="payNow()">Buy Now for ₹1</button>
-<div class="form-note">After successful payment, click "Already Purchased" and verify using the same email.</div>
-<p id="formMsg" class="form-message"></p>
-
-<br>
-<a href="check_email.html" class="already-btn">
-Already Purchased? Click Here
-</a>
-
-</div>
-
-<!-- FAQ -->
-<div class="faq">
-<h2>❓ Frequently Asked Questions</h2>
-<div class="faq-wrap">
-<div class="faq-item">
-<h4>How will I get course access after payment?</h4>
-<p>Complete payment, then verify your purchase email from the "Already Purchased" page to open your materials.</p>
-</div>
-<div class="faq-item">
-<h4>What is included in this course?</h4>
-<p>You get structured learning resources with Excel notes and video content designed from beginner to advanced level.</p>
-</div>
-<div class="faq-item">
-<h4>What if payment succeeds but access is not visible?</h4>
-<p>Contact us on WhatsApp with payment details and registered email. We will help you manually.</p>
-</div>
-</div>
-</div>
+<p style="font-size:20px;margin-bottom:20px;">
+<del>₹999</del> <strong style="color:#28a745;font-size:30px;">₹1 Only</strong>
+</p>
+<button class="btn">Buy Now</button>
+</section>
 
 <footer>
-© 2026 Professional Skills Academy <br>
-📧 shubhams2018@gmail.com |
-📞 9403030512 / 7507940073<br>
-<a href="analytics_dashboard.html" style="color:#cfe8ff;">View Analytics Dashboard</a>
-📞 9403030512 / 7507940073
+© 2026 Professional Skills Academy  
+<br>Contact: 9403030512 | shubhams2018@gmail.com
 </footer>
 
-<a href="https://wa.me/919403030512?text=Hello%20I%20want%20to%20know%20about%20the%20Excel%20Course%20offer%20for%20₹1."
-class="whatsapp-float" target="_blank" rel="noopener noreferrer">
-<img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp support">
-</a>
-
 <script>
-function trackEvent(name, payload){
-window.PSAAnalytics.trackEvent(name, payload || {});
-if(!window.dataLayer){
-window.dataLayer=[];
-}
-window.dataLayer.push({event:name, ...payload});
-console.log("track", name, payload || {});
-}
 
-function setMessage(text, isError){
-var msg = document.getElementById("formMsg");
-msg.style.color = isError ? "#c0392b" : "#2e7d32";
-msg.innerText = text;
-}
-
-function getLeadData(){
-return {
-name: document.getElementById("name").value.trim(),
-email: document.getElementById("email").value.trim(),
-mobile: document.getElementById("mobile").value.trim(),
-designation: document.getElementById("designation").value.trim()
-};
-}
-
-function validateLead(data){
-if(!data.name || !data.email || !data.mobile || !data.designation){
-return "Please fill all details before payment.";
-}
-if(!/^\S+@\S+\.\S+$/.test(data.email)){
-return "Please enter a valid email address.";
-}
-if(!/^\d{10}$/.test(data.mobile)){
-return "Please enter a valid 10-digit mobile number.";
-}
-return "";
-}
-
-function saveLeadLocally(data){
-localStorage.setItem("latestLead", JSON.stringify(data));
-}
-
-function payNow(){
-var lead = getLeadData();
-var validationError = validateLead(lead);
-if(validationError){
-setMessage(validationError, true);
-trackEvent("lead_validation_failed", {reason: validationError});
-return;
-}
-
-setMessage("Opening secure checkout...", false);
-saveLeadLocally(lead);
-trackEvent("buy_now_clicked", {email: lead.email, mobile: lead.mobile});
-
-var buyBtn = document.getElementById("buyBtn");
-buyBtn.disabled = true;
-
-var options={
-"key":"rzp_live_yA31xxMPut8Ech",
-"amount":100,
-"currency":"INR",
-"name":"Professional Skills Academy",
-"description":"Excel Combo Course - ₹1 Offer",
-"prefill":{
-"name":lead.name,
-"email":lead.email,
-"contact":lead.mobile
-},
-"notes":{
-"designation":lead.designation
-},
-"handler": function (response) {
-trackEvent("payment_success", {payment_id: response.razorpay_payment_id});
-alert("Payment Successful! 🎉");
-window.location.href="check_email.html";
-},
-"modal": {
-"ondismiss": function(){
-buyBtn.disabled = false;
-setMessage("Checkout closed. You can try again.", true);
-trackEvent("checkout_dismissed", {});
+/* Scroll Reveal Animation */
+window.addEventListener('scroll',function(){
+var reveals=document.querySelectorAll('.reveal');
+for(var i=0;i<reveals.length;i++){
+var windowHeight=window.innerHeight;
+var elementTop=reveals[i].getBoundingClientRect().top;
+var elementVisible=100;
+if(elementTop<windowHeight-elementVisible){
+reveals[i].classList.add('active');
 }
 }
-};
-
-var rzp=new Razorpay(options);
-rzp.on("payment.failed", function(response){
-buyBtn.disabled = false;
-setMessage("Payment failed. Please retry or contact support.", true);
-trackEvent("payment_failed", {reason: response.error.description});
 });
 
-trackEvent("checkout_opened", {});
-rzp.open();
+/* Smooth Scroll */
+function scrollToEnroll(){
+document.getElementById("enroll").scrollIntoView({behavior:"smooth"});
 }
 
-trackEvent("landing_page_viewed", {});
 </script>
 
 </body>
