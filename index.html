@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Excel Mastery ₹1 Offer</title>
+<title>Excel Mastery | Luxury Edition</title>
 
-<!-- Premium Font -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -13,131 +12,157 @@
 
 body{
 font-family:'Inter',sans-serif;
-background:linear-gradient(135deg,#141E30,#243B55,#000000);
-background-size:300% 300%;
-animation:gradientMove 12s ease infinite;
+background:radial-gradient(circle at top,#1a1a1a,#000000 70%);
 color:#fff;
 overflow-x:hidden;
 }
 
-@keyframes gradientMove{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+/* GOLD TEXT EFFECT */
+.gold-text{
+background:linear-gradient(45deg,#d4af37,#f5e6a1,#c9a227);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 /* HERO */
 .hero{
-padding:70px 20px 40px;
 text-align:center;
+padding:80px 20px 40px;
 animation:fadeDown 1.2s ease;
 }
 
 .hero h1{
 font-family:'Playfair Display',serif;
-font-size:34px;
-font-weight:700;
+font-size:40px;
 letter-spacing:1px;
-margin-bottom:12px;
+margin-bottom:15px;
 }
 
 .hero p{
-font-size:15px;
 opacity:0.85;
-margin-bottom:18px;
-}
-
-@keyframes fadeDown{
-from{transform:translateY(-30px);opacity:0;}
-to{transform:translateY(0);opacity:1;}
+font-size:16px;
+margin-bottom:20px;
 }
 
 .offer{
 display:inline-block;
-background:linear-gradient(45deg,#c9a227,#f5d76e);
-color:#000;
-padding:8px 22px;
+padding:8px 25px;
 border-radius:30px;
-font-size:13px;
+background:linear-gradient(45deg,#d4af37,#f5e6a1);
+color:#000;
 font-weight:600;
-box-shadow:0 6px 20px rgba(0,0,0,0.4);
+box-shadow:0 8px 25px rgba(212,175,55,0.4);
 }
 
 /* CONTAINER */
 .container{
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 padding:20px;
 }
 
-/* FROSTED GLASS CARD */
-.glass{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-border:1px solid rgba(255,255,255,0.15);
-padding:25px;
-border-radius:18px;
-box-shadow:0 15px 35px rgba(0,0,0,0.5);
-margin-bottom:20px;
-transition:0.4s ease;
-}
-
-.glass:hover{
-transform:translateY(-6px);
-box-shadow:0 20px 45px rgba(0,0,0,0.6);
-}
-
-/* GRID */
+/* FLOATING GLASS CARDS */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:18px;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
-/* PRICE */
-.price{
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(255,215,0,0.2);
+border-radius:20px;
+padding:25px;
 text-align:center;
-margin:20px 0;
-font-size:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.6);
+transition:0.4s ease;
+animation:float 5s ease-in-out infinite;
 }
 
-.price del{opacity:0.6;}
+.card:nth-child(2){animation-delay:1s;}
+.card:nth-child(3){animation-delay:2s;}
+.card:nth-child(4){animation-delay:3s;}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 20px 45px rgba(212,175,55,0.5);
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+/* PRICE SECTION */
+.price-box{
+margin-top:60px;
+text-align:center;
+padding:40px;
+border-radius:25px;
+background:rgba(255,255,255,0.04);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,215,0,0.3);
+box-shadow:0 20px 50px rgba(0,0,0,0.7);
+}
+
+.price-box h2{
+font-family:'Playfair Display',serif;
+margin-bottom:15px;
+}
+
+.price{
+font-size:20px;
+margin:15px 0;
+}
+
+.price del{opacity:0.5;}
+
 .price strong{
-font-size:30px;
-color:#f5d76e;
+font-size:34px;
+color:#d4af37;
 }
 
 /* BUTTON */
 .btn{
-display:inline-block;
-padding:13px 35px;
+padding:15px 40px;
 border-radius:40px;
-background:linear-gradient(45deg,#c9a227,#f5d76e);
-color:#000;
-font-weight:600;
 border:none;
+font-weight:600;
+font-size:16px;
 cursor:pointer;
-box-shadow:0 8px 25px rgba(0,0,0,0.5);
-transition:all 0.3s ease;
+background:linear-gradient(45deg,#d4af37,#f5e6a1);
+color:#000;
+box-shadow:0 10px 30px rgba(212,175,55,0.5);
+transition:0.3s ease;
 }
 
 .btn:hover{
-transform:translateY(-4px);
-box-shadow:0 15px 35px rgba(0,0,0,0.6);
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(212,175,55,0.7);
 }
 
 .btn:active{
 transform:scale(0.95);
 }
 
+/* ANIMATIONS */
+@keyframes fadeDown{
+from{transform:translateY(-40px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
+}
+
 /* FOOTER */
 footer{
 text-align:center;
-padding:20px;
-font-size:12px;
-opacity:0.7;
-margin-top:30px;
+padding:30px;
+font-size:13px;
+opacity:0.6;
+margin-top:60px;
+border-top:1px solid rgba(255,215,0,0.2);
 }
 </style>
 </head>
@@ -145,42 +170,36 @@ margin-top:30px;
 <body>
 
 <div class="hero">
-<h1>Master Microsoft Excel</h1>
-<p>Beginner to Advanced • Lifetime Access • PDF + Videos</p>
+<h1 class="gold-text">Master Microsoft Excel</h1>
+<p>Luxury Edition • Beginner to Advanced • Lifetime Access</p>
 <div class="offer">🔥 ₹999 Course at ₹1 Only</div>
 </div>
 
 <div class="container">
 
-<div class="glass">
 <div class="grid">
-<div>📊 Used in Every Industry</div>
-<div>💼 Boost Salary & Promotion</div>
-<div>📈 High Demand Corporate Skill</div>
-<div>🌍 Required in MNC & Govt Jobs</div>
-</div>
+<div class="card">📊 Used in Every Industry</div>
+<div class="card">💼 High Salary Skill</div>
+<div class="card">📈 Career Growth Guaranteed</div>
+<div class="card">🌍 Global Corporate Demand</div>
 </div>
 
-<div class="glass" style="text-align:center;">
-<h2 style="font-family:'Playfair Display',serif;margin-bottom:10px;">
-🚀 Limited Time Career Upgrade
-</h2>
-<p style="font-size:14px;opacity:0.85;">
-Master Excel today and unlock corporate success at just ₹1.
-</p>
+<div class="price-box">
+<h2 class="gold-text">Exclusive Limited Time Offer</h2>
+<p>Upgrade your career with the most powerful business skill.</p>
 
 <div class="price">
 <del>₹999</del><br>
 <strong>₹1 Only</strong>
 </div>
 
-<button class="btn">Buy Now</button>
+<button class="btn">Enroll Now</button>
 </div>
 
 </div>
 
 <footer>
-© 2026 Professional Skills Academy • 9403030512
+© 2026 Professional Skills Academy • Premium Learning Experience
 </footer>
 
 </body>
